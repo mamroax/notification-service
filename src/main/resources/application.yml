@@ -1,0 +1,26 @@
+spring:
+  kafka:
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+    # bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
+      bootstrap-servers: kafka:9092
+app:
+  kafka:
+    topic: user-operations
+
+# Mail defaults (for production set real SMTP)
+spring:
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:3025}
+    username: ${MAIL_USER:}
+    password: ${MAIL_PASS:}
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+server:
+  port: 8081
