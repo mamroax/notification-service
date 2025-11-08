@@ -17,5 +17,6 @@ public class EmailService {
         msg.setSubject(subject);
         msg.setText(text);
         mailSender.send(msg);
+        System.out.println("Письмо отправлено " + msg);
     }
 }

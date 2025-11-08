@@ -14,8 +14,9 @@ public class NotificationListener {
         this.emailService = emailService;
     }
 
-    @KafkaListener(topics = "${app.kafka.topic:user-operations}", groupId = "${spring.kafka.consumer.group-id:notification-group}")
+    @KafkaListener(topics = "${app.kafka.topic:user-events}", groupId = "${spring.kafka.consumer.group-id:notification-group}")
     public void listen(UserOperationMessage msg) {
+        System.out.println("Получено сообщение: " + msg);
         if (msg == null) return;
         String op = msg.getOperation();
         String email = msg.getEmail();
