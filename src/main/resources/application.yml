@@ -3,10 +3,10 @@ spring:
     consumer:
       group-id: notification-group
       auto-offset-reset: earliest
-      bootstrap-servers: ${KAFKA_BOOTSTRAP:kafka:9092}
+      bootstrap-servers: localhost:9092 # ${KAFKA_BOOTSTRAP:kafka:9092}
   mail:
-    host: ${MAIL_HOST:mailhog}
-    port: ${MAIL_PORT:1025}
+    host: localhost # ${MAIL_HOST:mailhog}
+    port: 1025 # ${MAIL_PORT:1025}
     username: ${MAIL_USER:}
     password: ${MAIL_PASS:}
     properties:
