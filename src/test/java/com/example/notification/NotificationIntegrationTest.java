@@ -99,7 +99,7 @@ class NotificationIntegrationTest {
 //        String body = (String) msgs[0].getContent();
 //        assertThat(body).contains("Здравствуйте! Ваш аккаунт был удалён.");
 //    }
-
+//
 //    @Test
 //    void restEndpointSendsEmail() throws Exception {
 //        UserOperationMessage msg = new UserOperationMessage("CREATED", "rest@example.com");

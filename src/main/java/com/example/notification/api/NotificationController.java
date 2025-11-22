@@ -17,7 +17,7 @@ public class NotificationController {
 
     @PostMapping("/send")
     public ResponseEntity<String> send(@RequestBody UserOperationMessage msg) {
-        if (msg == null || msg.getEmail() == null) {
+        if (msg == null || msg.getEmail() == null || msg.getEmail().isBlank()) {
             return ResponseEntity.badRequest().body("Missing message or email");
         }
         String op = msg.getOperation();
